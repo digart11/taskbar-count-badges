@@ -4,17 +4,17 @@ See how many windows are represented by each app button on the Windows 11 taskba
 
 Taskbar Count Badges adds a small customizable indicator when a taskbar app
 button represents multiple windows. The indicator can be shown as either a
-**number badge** or a compact stack of **vertical dots**.
+**number badge** or compact **dots**.
 
 ## Screenshots
 
 ### Customization examples
 
-![Taskbar Count Badges examples](https://raw.githubusercontent.com/digart11/TaskbarCountBadges/main/images/showcase.png)
+![Taskbar Count Badges examples](https://raw.githubusercontent.com/digart11/taskbar-count-badges/main/images/showcase.png)
 
 ### Settings
 
-![Taskbar Count Badges settings](https://raw.githubusercontent.com/digart11/TaskbarCountBadges/main/images/settings.png)
+![Taskbar Count Badges settings](https://raw.githubusercontent.com/digart11/taskbar-count-badges/main/images/settings.png)
 
 ## Display styles
 
@@ -32,20 +32,29 @@ The badge can be customized with:
 - Font family, size, and weight
 - Configurable maximum number, with larger values shown using `+`
 
-### Vertical dots
+### Dots
 
-Shows a minimal vertical stack of dots beside the app icon.
+Shows a minimal stack or row of dots around the app icon.
 
-- Position the dots on the left or right
+- Left and right positions use a vertical stack
+- Top and bottom positions use a horizontal row
+- Bottom replaces the native Windows running indicator
+- Bottom shows one dot for one running window
+- Left, right, and top leave the native Windows running indicator unchanged
+- Windows task progress indicators are left untouched
 - Change dot size and color
 - Up to five dots are shown; five dots means **five or more windows**
 
 ## Behavior
 
-By default, no indicator is shown when a taskbar button represents a single
-window. The indicator appears when that button represents two or more windows.
+By default, no count indicator is shown when a taskbar button represents a
+single window. The indicator appears when that button represents two or more
+windows.
 
 The minimum window count can be changed in the settings.
+
+Bottom dots are the exception: they always start at one window because they
+replace the Windows running indicator.
 
 Window counts update automatically as windows are opened and closed, and
 settings are applied live.
@@ -75,5 +84,5 @@ The mod uses the taskbar's own per-button grouping information instead of
 independently scanning all desktop windows. Counts therefore follow Windows
 taskbar grouping, including per-taskbar behavior on multi-monitor systems.
 
-The badge is visual only and doesn't change taskbar grouping, combining, window
-ordering, or application behavior.
+The indicators are visual only and don't change taskbar grouping, combining,
+window ordering, application behavior, or task progress.
