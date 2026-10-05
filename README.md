@@ -2,18 +2,17 @@
 
 ![Taskbar Count Badges examples](images/showcase.png)
 
-**Current release:** 1.1.0
+**Current release:** 1.2.0
 
 Taskbar Count Badges shows how many windows are represented by each app button on the Windows 11 taskbar using customizable number badges or compact dots.
 
-## What's New in 1.1
+## What's New in 1.2
 
-- Added top and bottom dot positions
-- Top and bottom dots are displayed horizontally
-- Bottom dots replace the native Windows running indicator and show from one running window
-- Left, right, and top dot positions keep the native Windows running indicator unchanged
-- Windows task progress indicators remain untouched
-- Improved bottom-dot indicator handling and cleanup
+- Added horizontal and vertical offsets for dots
+- Added active/inactive indicator styling
+- Inactive number-badge backgrounds and dots are dimmed while the active app remains at full opacity
+- Added configurable inactive opacity
+- Inactive dimming can be disabled
 
 ## Display Styles
 
@@ -78,6 +77,8 @@ Configure:
 
 - Left, right, top, or bottom position
 - Dot size
+- Horizontal offset
+- Vertical offset
 - Dot color
 
 ## Behavior
@@ -88,7 +89,9 @@ The minimum window count can be changed in the settings.
 
 Bottom dots are the exception: they always start at one window because they replace the native Windows running indicator.
 
-Window counts update automatically as windows are opened and closed, and settings are applied live.
+By default, inactive number-badge backgrounds and dots are dimmed while the currently active app remains at full opacity. The inactive opacity can be adjusted in the settings, or inactive dimming can be disabled entirely.
+
+Window counts update automatically as windows are opened and closed, active state follows the Windows taskbar, and settings are applied live.
 
 ## Compatibility
 
